@@ -1,0 +1,30 @@
+<body>
+  <div class='container'>
+    <header>
+      <H1 id='board-heading'>otters 4 days</H1>
+
+    <form id='new-otter'>
+      <input type="text" name="text" placeholder="Enter otter url">
+    </form>
+
+    </header>
+
+
+    <ul>
+      {{#each images}}
+        {{> image}}
+      {{/each}}
+    </ul>
+
+  </div>
+</body>
+
+<template name='image'>
+  <li class='look-at-this-fucking-otter-image'>
+    <img src="{{url}}">
+    <form class="edit-otter">
+      <input type="text" name='text' placeholder="Edit">
+    </form>
+    <button class="delete">&times;</button> 
+  </li>
+</template>
